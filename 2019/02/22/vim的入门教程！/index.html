@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>vim的入门教程！ - Fighting杰的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content="生活,博客,写作，思考，跨界">
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="../../../../atom.xml " title="Fighting杰的博客" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+</head></html>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="../../../../index.html" class="logo">Fighting杰的博客</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="../../../../index.html" class="menu-item-link">返回</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../archives" class="menu-item-link">文章集合</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../categories/爬虫" class="menu-item-link">编程知识</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../categories/经方" class="menu-item-link">经方</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../categories/随笔" class="menu-item-link">随笔</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../about-me" class="menu-item-link">关于我</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">vim的入门教程！</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2019-02-22</span>
+  </div>
+  <div class="post-content">
+    <h1 id="Vim的入门教程！"><a href="#Vim的入门教程！" class="headerlink" title="Vim的入门教程！"></a>Vim的入门教程！</h1><p>在编辑器的世界里面，vim号称为神一般的存在。其实，作为一个刚刚入门的开发者，对于这款神一样的编辑器并没有什么很强烈的感觉。</p>
+<p>平常很复杂的功能用不上，那么我们就来写一些vim的简单操作吧！</p>
+<h3 id="Vim的模式分类"><a href="#Vim的模式分类" class="headerlink" title="Vim的模式分类"></a>Vim的模式分类</h3><p>Vim的模式分为三类，命令模式、编辑模式、末行模式、我们打开Vim就默认进入了其命令模式，这个时候只能对其输入相应的命令，如果命令属于Vim的命令，则Vim会执行此命令，否则会进行报警。</p>
+<p>在命令模式插入 “ <strong>i</strong> ”会进入编辑模式，插入 “ <strong>：</strong>”会进入末行模式。无论是编辑模式还是末行模式，按下esc<br>都会退出当前模式进入命令模式。</p>
+<h3 id="进入插入模式："><a href="#进入插入模式：" class="headerlink" title="进入插入模式："></a>进入插入模式：</h3><figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">i: </span><br><span class="line">插入光标前一个字符</span><br><span class="line"><span class="keyword">I</span>：</span><br><span class="line">插入行首</span><br><span class="line">a：</span><br><span class="line">插入光标后一个字符</span><br><span class="line">o：</span><br><span class="line">向下新开一行，插入行首</span><br><span class="line"><span class="keyword">O</span>：</span><br><span class="line">向上新开一行，插入行首</span><br></pre></td></tr></table></figure>
+<h3 id="移动光标："><a href="#移动光标：" class="headerlink" title="移动光标："></a>移动光标：</h3><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Ctrl</span> + d: </span><br><span class="line">向下翻半屏</span><br><span class="line"></span><br><span class="line"><span class="symbol">Ctrl</span> + u：</span><br><span class="line">向上翻半屏</span><br><span class="line"></span><br><span class="line"><span class="symbol">Ctrl</span> + f：</span><br><span class="line">向下翻一屏</span><br><span class="line"></span><br><span class="line"><span class="symbol">Ctrl</span> + <span class="keyword">b：</span></span><br><span class="line"><span class="keyword">向上翻一屏</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">gg：</span></span><br><span class="line"><span class="keyword">光标移动到文件开头</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">G：</span></span><br><span class="line"><span class="keyword">光标移动到文件末尾</span></span><br><span class="line"><span class="keyword"></span></span><br><span class="line"><span class="keyword">G：</span></span><br><span class="line"><span class="keyword">光标移动到指定行，行号 </span>G</span><br></pre></td></tr></table></figure>
+<h3 id="删除命令："><a href="#删除命令：" class="headerlink" title="删除命令："></a>删除命令：</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">dd</span>: 删除光标所在行，n dd删除指定的行数</span><br></pre></td></tr></table></figure>
+<h3 id="撤销命令："><a href="#撤销命令：" class="headerlink" title="撤销命令："></a>撤销命令：</h3><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">u：</span><br><span class="line">一步一步撤销</span><br><span class="line"></span><br><span class="line">Ctrl + <span class="string">r:</span></span><br><span class="line">反撤销</span><br></pre></td></tr></table></figure>
+<h3 id="文本行移动："><a href="#文本行移动：" class="headerlink" title="文本行移动："></a>文本行移动：</h3><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;</span>：</span><br><span class="line">文本行右移</span><br><span class="line"></span><br><span class="line">&lt;&lt;: </span><br><span class="line">文本行左移</span><br></pre></td></tr></table></figure>
+<h3 id="复制粘贴："><a href="#复制粘贴：" class="headerlink" title="复制粘贴："></a>复制粘贴：</h3><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yy：</span><br><span class="line">复制当前行，<span class="built_in">n</span> yy 自光标开始起复制<span class="built_in">n</span>行</span><br><span class="line"></span><br><span class="line">p：</span><br><span class="line">在光标开始位置向下开辟一行，粘贴</span><br></pre></td></tr></table></figure>
+<h3 id="替换命令："><a href="#替换命令：" class="headerlink" title="替换命令："></a>替换命令：</h3><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">末行模式下，将光标所在行的abc全部替换为<span class="number">123</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">:%s/abc/</span><span class="number">123</span>/g</span><br><span class="line"></span><br><span class="line">末行模式下，将第一行到第十行之间的ABC全部替换为<span class="number">123</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">:</span><span class="number">1</span>,<span class="number">10</span>s/abc/<span class="number">123</span>/g</span><br></pre></td></tr></table></figure>
+  </div>
+  <div class="post-footer">
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2019
+  <span class="author">
+    Fighting杰
+  </span>
+</footer>
+    </div>
+  </body>
+</html>
