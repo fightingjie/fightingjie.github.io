@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>Linux最常用的十个命令 - Fighting杰的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content="linux,编程">
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="../../../../atom.xml " title="Fighting杰的博客" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+</head></html>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="../../../../index.html" class="logo">Fighting杰的博客</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="../../../../index.html" class="menu-item-link">返回</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../archives" class="menu-item-link">文章集合</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../categories/爬虫" class="menu-item-link">编程知识</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../categories/经方" class="menu-item-link">经方</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../categories/随笔" class="menu-item-link">随笔</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../about-me" class="menu-item-link">关于我</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">Linux最常用的十个命令</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2019-02-21</span>
+  </div>
+  <div class="post-content">
+    <h1 id="你知道Linux最常用的十个命令么？"><a href="#你知道Linux最常用的十个命令么？" class="headerlink" title="你知道Linux最常用的十个命令么？"></a>你知道Linux最常用的十个命令么？</h1><h2 id="cd命令：目录切换"><a href="#cd命令：目录切换" class="headerlink" title="cd命令：目录切换"></a>cd命令：目录切换</h2><p>这是一个日常使用最为频繁第一个命令，它可以切换当前目录，参数为要切换的目录路径，可以为绝对路径，也可以为相对路径。</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">切换到绝对路径:</span><br><span class="line"></span><br><span class="line"><span class="keyword">cd</span> <span class="string">/hexo/</span>编程知识</span><br><span class="line"></span><br><span class="line">切换到相对路径:</span><br><span class="line"></span><br><span class="line"><span class="keyword">cd</span> <span class="string">./hexo</span> 切换到当前目录下的hexo文件夹，. 代表当前目录</span><br><span class="line"><span class="keyword">cd</span> <span class="string">../hexo</span> 切换到上一层目录下的hexo文件夹，<span class="string">..</span> 代表上一层目录</span><br></pre></td></tr></table></figure>
+<h2 id="ls命令：列出当前文件"><a href="#ls命令：列出当前文件" class="headerlink" title="ls命令：列出当前文件"></a>ls命令：列出当前文件</h2><p>这个命令可以列出当前文件夹中的所有文件，它有相当多的参数，我们一起来了解一下</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">ls</span> -a </span><br><span class="line"></span><br><span class="line">列出全部文件，（前缀带.）连同隐藏的文件一起显示出来。</span><br><span class="line"></span><br><span class="line"><span class="keyword">ls</span> -l </span><br><span class="line"></span><br><span class="line">列出文件的属性与权限数据。</span><br><span class="line"></span><br><span class="line"><span class="keyword">ls</span> -h </span><br><span class="line"></span><br><span class="line">以较为易读的方式如KB、GB的形式将文件列出。</span><br><span class="line"></span><br><span class="line"><span class="keyword">ls</span> -R </span><br><span class="line"></span><br><span class="line">将所有的文件，及其子文件夹中的文件一起显示出来。</span><br></pre></td></tr></table></figure>
+<h2 id="grep命令：文本搜索命令"><a href="#grep命令：文本搜索命令" class="headerlink" title="grep命令：文本搜索命令"></a>grep命令：文本搜索命令</h2><p>在Linux系统中，grep命令是一种强大的文本搜索工具，使用grep允许对文本文件进行模式查找。如果找到匹配模式，grep打印包含模式的所有行。</p>
+<p>其一般格式：<br><figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">grep</span> [-选项] <span class="string">'搜索内容串'</span> 文件名</span><br></pre></td></tr></table></figure></p>
+<p>选项说明：</p>
+<p>-v ： 显示不包含匹配文本的所有行<br>-n ： 显示匹配行及行号<br>-i ： 忽略大小写</p>
+<p>搜索内容串可以写成正则表达式的内容对文件内容进行匹配。</p>
+<h2 id="find命令：查找文件命令"><a href="#find命令：查找文件命令" class="headerlink" title="find命令：查找文件命令"></a>find命令：查找文件命令</h2><p>find命令的功能十分强大，通常可以用来搜寻特定目录下符合条件的文件。</p>
+<figure class="highlight sqf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">常用用法</span><br><span class="line"></span><br><span class="line"><span class="built_in">find</span> ./-<span class="built_in">name</span> test.sh                以文件名为查询标准，查询当前目录下名为test.sh的文件</span><br><span class="line"><span class="built_in">find</span> ./-<span class="built_in">name</span> <span class="string">'*.sh'</span>                 查找当前目录下所有后缀为.sh的文件</span><br><span class="line"><span class="built_in">find</span> /tmp -<span class="built_in">size</span> <span class="number">2</span>M                  查找在/tmp目录下等于<span class="number">2</span>M的文件</span><br><span class="line"><span class="built_in">find</span> /tmp -<span class="built_in">size</span> +<span class="number">2</span>M                 查找在/tmp目录下大于<span class="number">2</span>M的文件</span><br><span class="line"><span class="built_in">find</span> ./-<span class="built_in">size</span> +<span class="number">4</span>k -<span class="built_in">size</span> -<span class="number">5</span>M          查找当前目录下大于<span class="number">4</span>K，小于<span class="number">5</span>M的文件</span><br></pre></td></tr></table></figure>
+<h2 id="gt-命令：输出重定向命令"><a href="#gt-命令：输出重定向命令" class="headerlink" title="&gt;命令：输出重定向命令"></a>&gt;命令：输出重定向命令</h2><p>Linux允许将终端中的输出的显示输入到一个文件夹中</p>
+<p>写法如下：</p>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ls</span> -R &gt; 重定向文件<span class="string">.txt</span></span><br></pre></td></tr></table></figure>
+<h2 id="管道命令：-和-分屏显示命令：more"><a href="#管道命令：-和-分屏显示命令：more" class="headerlink" title="管道命令：| 和 分屏显示命令：more"></a>管道命令：| 和 分屏显示命令：more</h2><p>查看内容时，信息过长无法在一屏上显示时，可以采用分屏显示命令more，每次只显示一页，按下空格显示下一页，按下q键退出显示，按下h获取帮助</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">more</span> 1<span class="selector-class">.py</span></span><br></pre></td></tr></table></figure>
+<p>管道：一个命令的输出可以通过管道作为另一个命令的输入，常配合分屏命令一起使用。</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ls</span> -lh | <span class="keyword">more</span></span><br></pre></td></tr></table></figure>
+<h2 id="clear命令：清屏命令"><a href="#clear命令：清屏命令" class="headerlink" title="clear命令：清屏命令"></a>clear命令：清屏命令</h2><p>clear命令可以清除终端上的显示</p>
+<h2 id="cat命令：查看文本命令"><a href="#cat命令：查看文本命令" class="headerlink" title="cat命令：查看文本命令"></a>cat命令：查看文本命令</h2><p>Cat命令可以查看某个文本文件的内容</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">Cat</span> 1<span class="selector-class">.py</span></span><br></pre></td></tr></table></figure>
+<h2 id="cp和mv：复制和移动命令"><a href="#cp和mv：复制和移动命令" class="headerlink" title="cp和mv：复制和移动命令"></a>cp和mv：复制和移动命令</h2><p>cp命令是将一个文件或者目录复制到另一个文件或者目录中去。</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">cp</span> test1/hhh test2 </span><br><span class="line"></span><br><span class="line">复制test1文件夹下的hhh文件夹到test2文件夹中</span><br></pre></td></tr></table></figure>
+<p>mv命令可以移动文件也可以对文件进行重命名。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">mv</span> <span class="selector-tag">hhh</span> <span class="selector-tag">test1</span> </span><br><span class="line"></span><br><span class="line">移动<span class="selector-tag">hhh</span>文件到<span class="selector-tag">test1</span>文件夹</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">mv</span> 1<span class="selector-class">.py</span> 2<span class="selector-class">.py</span> </span><br><span class="line"></span><br><span class="line">将1<span class="selector-class">.py</span>重命名为2<span class="selector-class">.py</span></span><br></pre></td></tr></table></figure>
+<h2 id="tar-与-gzip：文件归档与文件压缩命令"><a href="#tar-与-gzip：文件归档与文件压缩命令" class="headerlink" title="tar 与 gzip：文件归档与文件压缩命令"></a>tar 与 gzip：文件归档与文件压缩命令</h2><p>tar命令为文件归档命令，此命令可以将一系列命令打包成一个大的文件</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tar -cvf test.tar * 打包所有文件</span><br><span class="line"></span><br><span class="line"><span class="deletion">-c 生成档案文件，创建打包文件</span></span><br><span class="line"></span><br><span class="line"><span class="deletion">-v 列出归档解档的详细过程</span></span><br><span class="line"></span><br><span class="line"><span class="deletion">-f 指定档案名称，f后面必须跟上档案名称，以.tar结尾</span></span><br></pre></td></tr></table></figure>
+<p>tar命令只负责打包，不负责压缩文件，要想压缩文件，需要选用gzip命令</p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gzip 选项 文件名</span><br><span class="line"></span><br><span class="line"><span class="deletion">-d 代表解压</span></span><br><span class="line"></span><br><span class="line"><span class="deletion">-r 代表压缩所有子目录</span></span><br></pre></td></tr></table></figure>
+<p>好了，常用的Linux命令介绍到这就结束了。</p>
+
+  </div>
+  <div class="post-footer">
+    
+      <ul class="post-tag-list"><li class="post-tag-list-item"><a class="post-tag-list-link" href="../../../../tags/linux/">linux</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="../../../../tags/编程/">编程</a></li></ul>
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2019
+  <span class="author">
+    Fighting杰
+  </span>
+</footer>
+    </div>
+  </body>
+</html>
