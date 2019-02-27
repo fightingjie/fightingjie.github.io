@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  
+  <title>Python如何操作文件 - Fighting杰的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+  <meta name="keywords" content="编程知识,python">
+  
+  
+    <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico?v=1.02">
+  
+  
+    <link rel="alternate" href="../../../../atom.xml " title="Fighting杰的博客" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="../../../../css/style.css">
+</head></html>
+  <body>
+    <div class="container">
+      <header class="header">
+  <div class="blog-title">
+    <a href="../../../../index.html" class="logo">Fighting杰的博客</a>
+    <div class="subtitle"></div>
+  </div>
+  <nav class="navbar">
+    <ul class="menu">
+      
+        <li class="menu-item">
+          <a href="../../../../index.html" class="menu-item-link">返回</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../archives" class="menu-item-link">文章集合</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../categories/编程知识" class="menu-item-link">编程知识</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../categories/经方" class="menu-item-link">经方</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../categories/随笔" class="menu-item-link">随笔</a>
+        </li>
+      
+        <li class="menu-item">
+          <a href="../../../../about-me" class="menu-item-link">关于我</a>
+        </li>
+      
+    </ul>
+  </nav>
+</header>
+<article class="post">
+  <div class="post-title">
+    <h1 class="article-title">Python如何操作文件</h1>
+  </div>
+   <div class="post-meta">
+    <span class="post-time">2019-02-27</span>
+  </div>
+  <div class="post-content">
+    <p>好记性比如烂笔头，计算机也是如此。</p>
+<p>当我们利用计算机计算得到大量数据之后，如果不能将这些数据保存起来，肯定是一件十分遗憾的事情，那么我们今天来学习一下如何使用Python来保存数据。</p>
+<h3 id="Python的open-函数"><a href="#Python的open-函数" class="headerlink" title="Python的open()函数"></a>Python的open()函数</h3><p>在Python中使用open()函数，可以打开打开一个新的文件，或者创建一个新的文件</p>
+<p>open(文件名，访问模式)</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">f</span> = open(<span class="string">"1.txt"</span>,<span class="string">"w"</span>)</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>访问模式</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>以只读的方式打开文件。文件指针默认在文件文件的开头。</td>
+</tr>
+<tr>
+<td>w</td>
+<td>打开一个新的文件只用于写入，如果文件存在则将其覆盖，如果文件不存在，则创建新的文件。</td>
+</tr>
+<tr>
+<td>a</td>
+<td>打开一个文件用于追加，如果文件存在，文件指针则在文件末尾。新的内容加入到已有内容之后，如果文件不存在，创建新的文件。</td>
+</tr>
+<tr>
+<td>rb</td>
+<td>以二进制格式打开一个文件用于只读，文件指针放在文件开头。</td>
+</tr>
+<tr>
+<td>wb</td>
+<td>以二进制格式打开一个文件用于写入，如果该文件夹存在则覆盖。如果文件不存在，创建一个新的文件。</td>
+</tr>
+<tr>
+<td>ab</td>
+<td>以二进制格式打开一个文件用于追加，如果文件已存在，文件指针将会放在文件结尾。</td>
+</tr>
+<tr>
+<td>r+</td>
+<td>打开一个文件用于读写，文件指针放在文件开头。</td>
+</tr>
+<tr>
+<td>w+</td>
+<td>打开一个文件用于读写。如果1该文件已存在则将其覆盖，如果文件不存在，创建新文件。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="关闭文件"><a href="#关闭文件" class="headerlink" title="关闭文件"></a>关闭文件</h3><p>打开一个文件，对文件的内容进行操作之后，需要对文件进行关闭，使用到close()函数。</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f.<span class="built_in">close</span>()</span><br></pre></td></tr></table></figure>
+<h3 id="文件的读写操作"><a href="#文件的读写操作" class="headerlink" title="文件的读写操作"></a>文件的读写操作</h3><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">f</span> = open(<span class="string">"1.txt"</span>,<span class="string">"w"</span>)</span><br></pre></td></tr></table></figure>
+<p>这段代码返回一个可以操作的对象<strong>f</strong>，在f对象里面又有一些方法，write()方法进行文件写入，read()方法进行文件读取</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = <span class="built_in">open</span>(<span class="string">"1.txt"</span>,<span class="string">"w"</span>)</span><br><span class="line">f.<span class="built_in">write</span>(<span class="string">"XX杰"</span>)</span><br><span class="line">f.<span class="built_in">close</span>()</span><br></pre></td></tr></table></figure>
+<p>这段代码写入”XX杰”三个字到文件名为1.txt的文件中去了。</p>
+<p>read()方法可以读取文件中的内容</p>
+<p><strong>read(num) 读取num字节的内容，read() 读取所有的内容</strong></p>
+<p><strong>readline()一次读取一行，readlines()可以按照行的方式，将整个文件夹中的内容一次性读取完全，并且返回一个列表，其中每一行的数据为一个元素.</strong></p>
+
+  </div>
+  <div class="post-footer">
+    
+      <ul class="post-tag-list"><li class="post-tag-list-item"><a class="post-tag-list-link" href="../../../../tags/python/">python</a></li><li class="post-tag-list-item"><a class="post-tag-list-link" href="../../../../tags/编程知识/">编程知识</a></li></ul>
+    
+
+    <a href="#top" class="top">Back to Top</a>
+  </div>
+</article>
+<footer>
+  &copy; 2019
+  <span class="author">
+    Fighting杰
+  </span>
+</footer>
+    </div>
+  </body>
+</html>
